@@ -1,25 +1,20 @@
 #include "mainwindow.h"//Подключение библиотеки mainwindow.h
 #include "ui_mainwindow.h"//Подключение библиотеки ui_mainwindow.h
 #include <linearregression.h>//Подключение библиотеки c++, которая работает с прямыми, генерирует рандомные числа
-#include "../Ml.lib/gradientdescent.h" 
+#include <gradientdescent.h>
 #include <stochasticgradientdescent.h> //Библиотека c рандомными числами и работа с прямой
 
 #include <QGridLayout> // Класс с сеткой, для работы с
 #include <QPushButton> // Класс, который предоставляет кнопку
 #include <QtCharts> //Позволяет рисовать линии, диаграммы
 #include <QtCharts/QLineSeries> // Позволяет рисовать линии
+#include <assert.h>
 
 
-/**
-	\brief Работа с gui
-	Создаем GroupBox, создаем Layout, добавляем QLabel, создаём text box, привязываем компоновку к виджету при помощи setLayout, создаём кнопку, привязываем кнопку, создаём вторую кнопку, привязываем вторую кнопку
-	,для отображения используем элемент Qchart, привязываем всё это к сетке QGridLayout, setCentralWidget - устанавливаем по центру, устанавливаем размер по умолчанию 800 на 600
-	*/
+
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent)
 {
- /**
- \defgroup QGroupBox Создаёт GroupBox
- */
+
     QGroupBox *randomizerSettingsGroupBox = new QGroupBox(tr("Randomizer settings"));
 	
     QGridLayout *randomizerSettingsLayout = new QGridLayout();  ///Layout
@@ -63,7 +58,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent)
     mainWidget->setLayout(mainLayout);
     setCentralWidget(mainWidget);
     resize(800, 600);
-*/
+
 
 }
 
