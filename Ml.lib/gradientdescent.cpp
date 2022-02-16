@@ -48,7 +48,7 @@ double GradientDescent::partialDiffWithRespectToTheta(const MultiPoint& point, c
     const auto& xVars = point.getXs();
     const int countOfThetasHavingX = xVars.size();
 
-    //(y - theta0 - theta1*x1 - ... - thetaN*xN)
+    ///(y - theta0 - theta1*x1 - ... - thetaN*xN)
     double diffValue = point.getY() - thetas[0];
 
     for (int i = 0; i < countOfThetasHavingX; ++i)
@@ -56,7 +56,7 @@ double GradientDescent::partialDiffWithRespectToTheta(const MultiPoint& point, c
         diffValue -= thetas[i + 1] * xVars[i];
     }
 
-    // multiple by 1 for partial diff theta0 or by x_i if partial diff theta_i
+    /// multiple by 1 for partial diff theta0 or by x_i if partial diff theta_i
     if (thetaIndex != 0)
     {
         diffValue *= xVars[thetaIndex - 1];
@@ -67,8 +67,9 @@ double GradientDescent::partialDiffWithRespectToTheta(const MultiPoint& point, c
 
 std::vector<double> GradientDescent::calculateParameters(const std::vector<MultiPoint>& points, double learningRate)
 {
-    // initial thetas are zeros, count of thetas is dimension
-    // for example: y = th0 + x1*th1 + x2*th2. Here Point dimension is 3
+    /// initial thetas are zeros, count of thetas is dimension
+    /// 
+    /// for example: y = th0 + x1*th1 + x2*th2. Here Point dimension is 3
     std::vector<double> thetas(points[0].getDimension());
 
     double lastError{};

@@ -7,7 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ml.app", "Ml.app\Ml.app.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ml.lib", "Ml.lib\Ml.lib.vcxproj", "{EAC7DCD5-DA5D-4D42-BA96-58D0AEEBC698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MlinNet.App", "MlinNet.App\MlinNet.App.csproj", "{154550DE-7523-4CE3-AAE7-0400DA15C668}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MlinNet.App", "MlinNet.App\MlinNet.App.csproj", "{154550DE-7523-4CE3-AAE7-0400DA15C668}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleTest", "SimpleTest\SimpleTest.vcxproj", "{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,16 @@ Global
 		{154550DE-7523-4CE3-AAE7-0400DA15C668}.Release|x64.Build.0 = Release|Any CPU
 		{154550DE-7523-4CE3-AAE7-0400DA15C668}.Release|x86.ActiveCfg = Release|Any CPU
 		{154550DE-7523-4CE3-AAE7-0400DA15C668}.Release|x86.Build.0 = Release|Any CPU
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Debug|x64.ActiveCfg = Debug|x64
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Debug|x64.Build.0 = Debug|x64
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Debug|x86.ActiveCfg = Debug|Win32
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Debug|x86.Build.0 = Debug|Win32
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Release|Any CPU.ActiveCfg = Release|Win32
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Release|x64.ActiveCfg = Release|x64
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Release|x64.Build.0 = Release|x64
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Release|x86.ActiveCfg = Release|Win32
+		{6D85ADB4-C710-4FF7-ACA8-57E87BB4DB9B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

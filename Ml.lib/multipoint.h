@@ -1,8 +1,9 @@
 #pragma once
 #include <utility>
 #include <vector>
+///Point calculations
 
-class MultiPoint
+class MultiPoint 
 {
     double m_y = 0.0;
     std::vector<double> m_xs;

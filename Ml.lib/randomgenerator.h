@@ -1,7 +1,7 @@
 #pragma once
 #include <random>
 #include "definitions.h"
-
+///This is a random number generator with a given range
 class EXPORT std::random_device;
 class EXPORT std::mt19937;
 

@@ -4,10 +4,11 @@
 #include "definitions.h"
 #include "multipoint.h"
 
-template <typename GRAD> class EXPORT LinearRegression
+///Linear Regression Algorithm
+template <typename GRAD> class EXPORT LinearRegression 
 {
 public:
-
+    ///calculateParameters that we call
     std::vector<double> calculateParameters(const std::vector<MultiPoint>& points, double learningRate)
     {
         return GRAD::calculateParameters(points, learningRate);

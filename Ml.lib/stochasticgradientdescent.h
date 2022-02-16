@@ -3,9 +3,10 @@
 
 #include "multipoint.h"
 #include "definitions.h"
-#include "randomgenerator.h"
+#include "randomgenerator.h" 
 
-class EXPORT StochasticGradientDescent
+///Second gradient descent, this one is unnecessary, it is faster but less accurate
+class EXPORT StochasticGradientDescent 
 {
     static std::vector<double> calculateGradients(const std::vector<double>& thetas, const MultiPoint& point, double learningRate);
     static double computeError(const std::vector<double>& thetas, const MultiPoint& point);

@@ -144,11 +144,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RandomGenerator2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ml.lib\Ml.lib.vcxproj">
       <Project>{eac7dcd5-da5d-4d42-ba96-58d0aeebc698}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RandomGenerator2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

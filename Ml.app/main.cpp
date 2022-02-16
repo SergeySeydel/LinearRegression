@@ -8,19 +8,22 @@
 #include <gradientdescent.h>
 #include <stochasticgradientdescent.h>
 #include <linearregression.h>
+#include "RandomGenerator2.h"
 
 
 
 void testLinearRegressionGradientDescent()
-{
+{ 
+    ///Example of template class LinearRegression
     LinearRegression<GradientDescent> lr;
+    /// Array of points (that we obtain from experiment)
     std::vector<MultiPoint> points;
 
     for (int i = 0; i < 10; ++i)
     {
         
-        
-                points.push_back(MultiPoint(2.4 + 3.3 * i,
+                ///sticks ten points, with step one
+                points.push_back(MultiPoint(2.4 + 3.3 * i, 
                     { static_cast<double>(i)}));
            /*     points.push_back(MultiPoint(2.4 + 3.3 * i + 3.7 * j + 0.6 * k,
                     { static_cast<double>(i), static_cast<double>(j), static_cast<double>(k) }));*/
@@ -163,6 +166,16 @@ void testLinearRegressionStochasticGradientDescent()
 
 }
 
+void testRandomGenerator2() 
+{
+    RandomGenerator2<double> doubleRG;
+    RandomGenerator2<int> intRG;
+    std::cout << doubleRG.generateInRange(1.2, 2.4) << std::endl;
+    std::cout << intRG.generateInRange(1, 3) << std::endl;
+
+
+}
+
 void testDesicionTree()
 {
     std::ifstream in("data_banknote_authentication.txt");
@@ -183,9 +196,10 @@ void testDesicionTree()
 
 int main()
 {
-    testLinearRegressionGradientDescent();
+    //testLinearRegressionGradientDescent();
 
-    testLinearRegressionGradientDescent_multiple();
-    testLinearRegressionGradientDescent_negative();
+  //  testLinearRegressionGradientDescent_multiple();
+   // testLinearRegressionGradientDescent_negative();
+    testRandomGenerator2();
     return 0;
 }
