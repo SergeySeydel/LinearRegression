@@ -102,6 +102,28 @@ TEST_F(LinearRegressionTest, testNegativeKAndB) {
     EXPECT_NEAR(k, th[1], 0.0001);
 }
 
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+
+    /*if (::teamcity::underTeamcity()) {
+        ::testing::TestEventListeners& listeners = ::testing::UnitTest::GetInstance()->listeners();
+        listeners.Append(new jetbrains::teamcity::TeamcityGoogleTestEventListener());
+    }
+
+    if (jetbrains::teamcity::underTeamcity()) {
+        ::testing::TestEventListeners& listeners = ::testing::UnitTest::GetInstance()->listeners();
+        listeners.Append(new GTest::TeamCityAdapter());
+    }*/
+
+    ::testing::TestEventListeners& listeners = ::testing::UnitTest::GetInstance()->listeners();
+    // Add unique flowId parameter if you want to run test processes in parallel
+    // See http://confluence.jetbrains.net/display/TCD6/Build+Script+Interaction+with+TeamCity#BuildScriptInteractionwithTeamCity-MessageFlowId
+    listeners.Append(new GTest::TeamCityAdapter());
+
+
+
+    return RUN_ALL_TESTS();
+}
 //TEST_F(LinearRegressionTest, testMultipointDimension3) {
 //    std::vector<MultiPoint> points;
 //    double b = -2.4;
