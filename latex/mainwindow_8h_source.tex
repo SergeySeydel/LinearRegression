@@ -1,0 +1,43 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+\label{mainwindow_8h_source}\index{QTProject/MlGuiApp/mainwindow.h@{QTProject/MlGuiApp/mainwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAINWINDOW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAINWINDOW\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <multipoint.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }Ui \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}}; \}}
+\DoxyCodeLine{11 QT\_END\_NAMESPACE}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <QtCharts>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     Q\_OBJECT}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_main_window}{\string~MainWindow}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{31     QChart* m\_chart; }
+\DoxyCodeLine{32     QLineEdit* m\_minLineEdit; }
+\DoxyCodeLine{33     QLineEdit* m\_maxLineEdit; }
+\DoxyCodeLine{34     QLineEdit* m\_datafromLineEdit;}
+\DoxyCodeLine{35     QLineEdit* m\_datatoLineEdit;}
+\DoxyCodeLine{36     std::vector<MultiPoint> m\_data;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} drawInputData(\textcolor{keyword}{const} std::vector<MultiPoint>\& data);}
+\DoxyCodeLine{38     }
+\DoxyCodeLine{39 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} generateDataPushButtonSlot();}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} drawPlotPushButtonSlot();}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAINWINDOW\_H}}
+
+\end{DoxyCode}
