@@ -87,7 +87,7 @@ TEST_F(LinearRegressionTest, testNegativeKAndB) {
     for (int i = 0; i < 10; ++i)
     {
 
-        ///sticks ten points, with step one
+        ///sticks ten  points, with step one
         points.push_back(MultiPoint(b + k * i,
             { static_cast<double>(i) }));
         /*     points.push_back(MultiPoint(2.4 + 3.3 * i + 3.7 * j + 0.6 * k,
